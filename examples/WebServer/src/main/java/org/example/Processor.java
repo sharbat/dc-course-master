@@ -108,6 +108,9 @@ public class Processor {
             socket.close();
         }
         else if (request.getRequestLine().toString().equals("GET /exec/params HTTP/1.1")){
+            for(int i=0;i<1000;i++){
+            checkForPrime(100);
+            }
             output.println("HTTP/1.1 200 OK");
             output.println("Content-Type: text/html; charset=utf-8");
             output.println();
